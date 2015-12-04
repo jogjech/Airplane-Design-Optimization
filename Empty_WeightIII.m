@@ -1,11 +1,11 @@
-function [W_e] = Empty_WeightIII(W_0,T_0,S_ref,L_fus,D_fus,S_ht,S_vt,c_f,Swet_Sref,A,e)
+function [W_e] = Empty_WeightIII(W_0,T_0,S_ref,L_fus,D_fus,S_ht,S_vt,c_f,Swet_Sref,A,e,lamda,Sweep_LE)
 	%[We] = Empty_WeightIII(W_o,T_o,S_ref,L_fus,D_fus,S_ht,S_vt,c_f,Swet_Sref,A,e)
    
     %Constants=============================================================
     W_0 = W_0 /9.81;%kg        %Convert Newtons to kg
-    lamda = 0.15;  %Taper Ratio
+    
     t_c = 0.14;     %Thickness to chord ratio for sc20714 airfoil
-    Sweep_LE = 35;%deg  %Leading edge sweep
+    
     Sweep_c_4 = atan(tand(Sweep_LE)-((1-lamda)/(A*(1+lamda))))*(180/pi);%deg   %Quarter chord sweep
     b = (S_ref*A)^0.5;%m       %Span
     C_root = (2*S_ref)/(b*(1+lamda));%m    %Root chord

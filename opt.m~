@@ -1,0 +1,13 @@
+%Optimization
+
+
+
+%X = ['S' 'AR' 'TR' 'sweep']
+for i = 1:length(S)
+        S_ref = S(i);
+        [ t, w ,wf] = T0_iteration(0.25,W0_guess,S_ref,1);
+    COC(t,w,wf)
+end
+    
+fun = @(x)optfun(WO_guess ,S_ref,index,A,lamda,Sweep_LE)
+[x,feval] = 

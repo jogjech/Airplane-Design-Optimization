@@ -1,4 +1,4 @@
-function [S_ht,S_vt] = Tail_Sizing(S_ref,L_fus,D_fus)
+function [S_ht,S_vt] = Tail_Sizing(S_ref,L_fus,D_fus,A)
 %[S_ht,S_vt] = Tail_Sizing(S_ref,L_fus,D_fus)
     InputFile
 %Constants 
