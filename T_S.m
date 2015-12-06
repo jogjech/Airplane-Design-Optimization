@@ -19,11 +19,11 @@ end
 
 figure(1)
 hold on
-plot(S,T0(:,1),S,T0(:,2),S,T0(:,3),S,T0(:,4),S,T0(:,5),S,T0(:,6),S,T0(:,7),S,T0(:,8),S,T0(:,9),S,T0(:,10),S,9.72e+05*ones(length(S),1),'LineWidth',2)
+plot(S,T0(:,1),S,T0(:,2),S,T0(:,3),S,T0(:,4),S,T0(:,5),S,T0(:,6),S,T0(:,7),S,T0(:,8),S,T0(:,9),S,T0(:,10),S,10.026e+05*ones(length(S),1),'LineWidth',2)
 xlabel('S_{ref} [m^2]')
 ylabel('Takeoff Thrust [N]')
 title('T-S Plot')
-T_COC = 2*10^5:5*10^3:1.4*10^6;
+T_COC = 2*10^5:5*10^3:1.5*10^6;
 disp('mei ka 1')
 tol = 1;
 

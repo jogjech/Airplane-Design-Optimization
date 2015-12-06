@@ -33,6 +33,9 @@ while (abs(T0 - T0_old) > tol)
     %call Design Diagram (get T0_W0)
     T_W = Design_Diagram(W0_Sref,CD0,K,CL_max,M,index);
     T0 = T_W * W0;
+    if index == 1
+        T0 = T0 + 30600;
+    end
     
 end
 
