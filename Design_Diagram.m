@@ -26,7 +26,7 @@ V_c = M*aCruise/ftPerNm*secsPerHr;                %Cruise Speed
 nz=1.5;                                           %Load factor
 WingLoad = W0_Sref;
 TW=zeros(1,10);
-CL_maxTO=CLmax/1.1;
+CL_maxTO=CLmax/1.18;
 CL_maxL=CL_maxTO/0.8;
 CL_maxCr=1.8;
 KTF=1.68781;
@@ -34,9 +34,10 @@ V_c=KTF*V_c;                                    %ft/s^2
 
 %Takeoff                                       % Length of the Runway
     TW(1)=WingLoad/(BFL/37.5*(rho_TO/rho_SL)*CL_maxTO);
-
-%Landing 
-    WL_S=(0.6*BFL-1000)/80*(rho_L/rho_SL)*CL_maxL/0.84;
+% 
+% %Landing 
+%     WL_S=(0.6*BFL-1000)/80*(rho_L/rho_SL)*CL_maxL/0.65;
+    
 
 %Climbing
     N = 2;                                            %Number of engines

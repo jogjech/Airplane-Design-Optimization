@@ -65,7 +65,10 @@ WR_cr(i + 1) = exp(-(R_cr(i + 1) - R_cr(i)) * C / (V_cr*LOverD_cr));
 W5_W4 = W5_W4 * WR_cr(i + 1);
 end
 % ------------------------------------------------Loiter
+
 W5 = W5_W4 * W4;
+Vstallcruise = sqrt(2 * W5/ (getDensity(10668)*Sref*1.8));
+
 C_loiter = 0.4 / 3600; % 1 / s
 CL_loiter = sqrt(CD0 / K(4));
 CD_loiter = CD0 + K(4) * CL_loiter ^ 2;
